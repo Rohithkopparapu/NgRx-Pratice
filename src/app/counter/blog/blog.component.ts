@@ -81,6 +81,7 @@ export class BlogComponent implements OnInit {
     this.store.dispatch(update_blog({id:'65d2ee909eabecb193817b2d',students:this.updatedList}));
     this.store.select('students').subscribe((data)=>{
        console.log(data);
+       console.log(data);
        
     })
   }

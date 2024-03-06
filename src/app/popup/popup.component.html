@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>New Blog</h1>
+<mat-dialog-content>This is my dialog content!</mat-dialog-content>
+<mat-dialog-actions>
+  <input matInput [(ngModel)]="title">
+  <input matInput [(ngModel)]="description">
+  <button  mat-button mat-dialog-close (click)="addBlog()">Add</button>
+  <button mat-button mat-dialog-close (click)="closepopup()">Close</button>
+</mat-dialog-actions>

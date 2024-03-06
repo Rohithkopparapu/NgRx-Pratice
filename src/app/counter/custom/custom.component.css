@@ -1,0 +1,30 @@
+.custom-select {
+    width: 200px; /* Adjust width as needed */
+    height: 36px; /* Adjust height as needed */
+    font-size: 14px; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    padding: 8px 12px; /* Adjust padding as needed */
+}
+
+.custom-select.mat-select-arrow {
+    /* Style for the select arrow icon */
+    color: #333; /* Adjust color as needed */
+}
+
+.mat-option {
+    /* Style for the options */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Adjust color as needed */
+}
+
+.mat-option:hover {
+    /* Style for hovered options */
+    background-color: #f0f0f0; /* Adjust background color as needed */
+}
+
+.mat-option.mat-selected {
+    /* Style for selected option */
+    background-color: #e0e0e0; /* Adjust background color as needed */
+    color: #333; /* Adjust color as needed */
+}

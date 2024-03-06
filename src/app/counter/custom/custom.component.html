@@ -1,0 +1,45 @@
+
+
+<mat-card>
+    <div class="container" style="display: flex;justify-content: space-between;">
+        <mat-card-content> 
+           <mat-form-field>
+            <div style="display: flex;flex-direction: column;justify-content: space-between;width: 100%;">
+                <mat-label>Custom Increment</mat-label>
+                <input matInput [(ngModel)]="counterInput">
+            </div>
+            </mat-form-field>
+       
+            <br>
+            <!-- <button mat-raised-button color="primary"  mat-raised-button (click)="onIncrement()">Custom Increment</button> -->
+            <mat-form-field>
+               <div style="display: block;">
+                <mat-label>Custom Decrement</mat-label>
+                <input matInput [(ngModel)]="counterDecrement">
+               </div>
+            </mat-form-field>
+            <button mat-raised-button color="primary"  mat-raised-button (click)="ondecrement()">Custom decrement</button>
+            <br>
+            </mat-card-content>
+            <mat-card-content>   
+               <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                <mat-select [(ngModel)]="actionType" class="custom-select">
+                    <mat-option value="Add">Add</mat-option>
+                    <mat-option value="remove">Remove</mat-option>
+                </mat-select>    
+                <button mat-raised-button color="primary"  mat-raised-button (click)="userSelection()">selection</button>
+            
+               </div>
+            </mat-card-content>
+            <br>
+            <mat-card-content>   
+            <div>
+                <input matInput [(ngModel)]="channelname">
+                <button mat-raised-button color="primary"  mat-raised-button (click)="changeChanelname()">Change channel name</button>
+            </div>
+            </mat-card-content>
+            <br>
+    </div>
+</mat-card>
+
+

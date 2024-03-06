@@ -1,0 +1,72 @@
+ <mat-card *ngFor="let item of blogList ;let i=index">
+    <mat-card-header>
+                <h1>{{item.title}}</h1>   
+                <div style="text-align:right;width: 100%;">
+                 <button (click)="update(i,item)" mat-raised-button color="primary">Edit</button>
+                 <button (click)="delete(i,item)" mat-raised-button color="primary">Delete</button>
+                </div>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{item.description}}</p>
+    </mat-card-content>
+</mat-card>
+
+<button  mat-raised-button color="primary" (click)="openPopup()">Add Blog</button> 
+
+ <input type="text" placeholder="ennter id" [(ngModel)]="id">
+<button (click)="deleteStudentlist()">Delete</button> 
+
+<section class="container">
+    <div class="data">
+        <div  class="home">
+            <button class="btn btn-primary"   style="width: 70px;height: 35px;margin: 10px;" >Home</button>
+        <p class="students">Students Data</p>   
+        </div>
+        <div class="search">
+            <!-- <input type="text" [(ngModel)]="searchStudents" (input)="search()" class="display" placeholder="Search Students" />
+            <button class="btn btn-primary display" (click)="search()">Search</button>
+            <button class="btn btn-primary display" (click)="clear()">Clear</button> -->
+        </div>
+    </div>
+    <form >
+        <ng-container>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let student of studentsList; let i = index">
+                        <tr>
+                            <ng-container>
+                                 <td><input [value]="student.id"></td>
+                                <td><input  [value]="student.name"></td>
+                                <td><input [value]="student.email"></td>
+                                <td><input [value]="student.phone"></td>
+                                <td><input [value]="student.DOB"></td>
+                                <td><input [value]="student.gender"></td>
+                                <td>
+                                  <input [value]="student.role">
+                                </td>
+                                <td>
+                                    <button (click)="updateList(student,i)">Update</button>
+                                    </td>
+                            </ng-container>   
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </ng-container>
+       
+    </form>
+    
+</section>
+
